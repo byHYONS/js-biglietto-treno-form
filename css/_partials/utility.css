@@ -62,9 +62,6 @@
 .col-95 {width: 95%;}        
 .col-100 {width: 100%;} 
 
-	/* CONTENT */
-.content {margin: 10px;} 
-
 /* -------------------------
           MODIFIER 
 ------------------------- */
@@ -89,12 +86,12 @@
 .ai-stretch {align-items: stretch;}
 .ai-baseline {align-items: baseline;}
 
-.ac-center {align-content: flex-start;}
-.ac-center {align-content: flex-end;}
+.ac-start {align-content: flex-start;}
+.ac-end {align-content: flex-end;}
 .ac-center {align-content: center;}
-.ac-center {align-content: stretch;}
-.ac-center {align-content: space-between;}
-.ac-center {align-content: space-around;}
+.ac-stretch {align-content: stretch;}
+.ac-between {align-content: space-between;}
+.ac-around {align-content: space-around;}
 
 .flex-center-center {justify-content: center; align-items: center;}
 

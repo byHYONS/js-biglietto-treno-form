@@ -4,54 +4,105 @@
         -----------------------------
 ***************************************** */
 
-/* ------------------------------
-          LAYOUT
-------------------------------- */
-.container {padding: 0 30px;}
-
-.col {width: 100%; border-radius: 25px;}
-
-.content {padding: 25px;}
-
-        /*  FINE  */
 
 /* **************************** */
     /* ---   SECTIONS   --- */
 /* **************************** */
 
-/* ------------------------------
-            BODY
------------------------------- */
+/* INPUT */
+
+body {
+        display: flex;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+}
+
+main {
+        overflow: scroll;
+        background-color: rgb(209, 15, 57);
+        margin: auto;
+        width: 90%;
+        height: 90%;
+}
+
+.biglietto_input h1, .biglietto_output h1 {
+        margin: 50px 0 35px;
+        color: #fff;
+        text-align: center;
+        font-size: 45px;
+}
+
+.contenuto {
+        padding: 30px;
+        background-color: #fff;
+        margin: auto;
+        width: 80%;
+        border-radius: 15px;
+        box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+        text-align: center;
+        color: rgb(209, 15, 57);
+        font-size: 20;
+        font-weight: 400;
+}
+
+input, select {
+        margin: 15px 0 25px;
+        padding: 10px;
+        border: unset;
+        border: 1px solid rgb(209, 15, 57);
+        border-radius: 10px;
+        outline: none;
+        font-size: 18px;
+        color: #322e2e;        
+}
+
+/* /INPUT */
+
+/* OUTPUT */
+.biglietto_output {display: none;}
+
+table {
+        margin: auto;
+        border-collapse: collapse;
+        width: 95%;
+}
+.biglietto_output h4 {
+        margin-left: 25px;
+        font-size: 20px;
+        text-transform: uppercase;
+}
+.dettaglio-biglietto {
+        margin-top: 10px;
+        height: 100px;
+        border-top: 1px solid #322e2e;
+        border-bottom: 1px solid #322e2e;       
+}
+
+.color-col {
+        background-color: #322e2e70;
+        font-size: 20px;
+}
+
+thead th {
+        text-transform: uppercase;
+}
+
+th {padding: 15px;}
+
+td {text-align: center; padding: 15px;}
+
+.nome-passeggero {text-transform: capitalize;}
 
 
-        /* FINE  */
 
-
-/* ------------------------------
-          HEADER
------------------------------- */
-
-        /* FINE  */
-
-/* ------------------------------
-           MAIN
-------------------------------- */
+/* /OUTPUT */
 
 
 
-
-
-
-        /* FINE  */
-
-/* ------------------------------
-          FOOTER
-------------------------------- */
-
-        /* FINE  */
-
-
-       
 
 /* ------------------------------
          *** FINE ***

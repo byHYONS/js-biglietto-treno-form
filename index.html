@@ -8,35 +8,74 @@
 </head>
 <body>
     <!-- INPUT PER NOME, ETÀ E KM + BOTTONI SUBMIT & ANNULLA -->
-    <section class="biglietto_input">
-        <form action="#">
-            <label for="nome-user">Nome Cognome</label>
-            <input type="text" id="nome-user" value="" placeholder="Mario Rossi" required>
-            <label for="km-user">Km da Percorrere</label>
-            <input type="number" id="km-user" value="" placeholder="150" required>
-            <select name="eta-user" id="eta-user">
-                <option value="selezione">--- seleziona ---</option>
-                <option value="minorenne">Minorenne</option>
-                <option value="over65">Over 65</option>
-                <option value="ordinario">Biglietto Ordinario</option>
-            </select>
-            <button id="submit">Genera</button>
-            <button id="clear">Annulla</button>
-        </form>
-    </section>
-    <!-- /INPUT PER NOME, ETÀ E KM -->
+    <main>
+        <section class="biglietto_input">
+            <h1>Calcola il prezzo del tuo biglietto</h1>
+            <form class="contenuto" action="#">
+                <div class="input d-flex jc-center">
+                    <div class="user-name">
+                        <label class="d-block" for="nome-user">Nome Cognome</label>
+                        <input type="text" id="nome-user" value="" placeholder="Mario Rossi" required>
+                    </div>
+                    <div class="km-user mx-35">
+                        <label class="d-block" for="km-user">Km da Percorrere</label>
+                        <input type="number" id="km-user" value="" placeholder="150" required>
+                    </div>
+                    <div class="eta-user">
+                        <label class="d-block" for="eta-user">Fascia d'età</label>
+                        <select name="eta-user" id="eta-user">
+                            <option value="selezione">-- Seleziona --</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="over65">Over 65</option>
+                            <option value="ordinario">Biglietto Ordinario</option>
+                        </select>
+                    </div>
+                </div>            
+                <div class="btn ta-center">
+                    <button id="submit" class="btn">Genera</button>
+                    <button id="clear" class="btn">Annulla</button>
+                </div>        
+            </form>
+        </section>
+        <!-- /INPUT PER NOME, ETÀ E KM -->
 
-    <!-- OUTPUT NOME, OFFERTA, CARROZZA, CODICE BIGLIETTO E PREZZO BIGLIETTO -->
-    <secttion class="biglietto_output">
+        <!-- OUTPUT NOME, OFFERTA, CARROZZA, CODICE BIGLIETTO E PREZZO BIGLIETTO -->
+        <secttion class="biglietto_output ">
+            <h1>Il tuo biglietto</h1>
+            <div class="contenuto">
+                <table class="dettaglio-biglietto">
+                    <h4>dettaglio passeggeri</h4>
+                    <thead>
+                        <tr>
+                            <th class="color-col">nome passeggero</th>
+                            <th>Offerta</th>
+                            <th>Carrozza</th>
+                            <th>Codice CP</th>
+                            <th>Costo biglietto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="color-col nome-passeggero">nome passeggero</th>
+                            <td class="offerta">Offerta</td>
+                            <td class="carrozza">Carrozza</td>
+                            <td class="codice">Codice CP</td>
+                            <td class="costo-biglietto">Costo biglietto</td>
+                        </tr>
+                    </tbody>
+                        
+                </table>
+            </div>
 
-    </secttion>
-    <!-- /OUTPUT NOME, OFFERTA, CARROZZA, CODICE BIGLIETTO E PREZZO BIGLIETTO -->
-    
+        </secttion>
+        <!-- /OUTPUT NOME, OFFERTA, CARROZZA, CODICE BIGLIETTO E PREZZO BIGLIETTO -->
+        
 
 
 
-    <!-- FILE JS -->
-    <script type="text/javascript" src="./js/main.js"></script>
-    <!-- /FILE JS -->
+        <!-- FILE JS -->
+        <script type="text/javascript" src="./js/main.js"></script>
+        <!-- /FILE JS -->
+    </main> 
 </body>
 </html>
