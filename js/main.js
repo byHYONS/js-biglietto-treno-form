@@ -77,6 +77,7 @@ annulla.addEventListener('click', function(e){
     userName.value = '';
     kmUser.value = '';
     etaUser.value = etaUser.options[0].value;
+    dettaglioBiglietto.style.display = 'none';
    
 });
 
