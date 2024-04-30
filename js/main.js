@@ -8,9 +8,8 @@ const kmUser = document.getElementById('km-user');
 console.log({kmUser});
 const etaUser = document.getElementById('eta-user');
 console.log({etaUser});
-const seleziona = etaUser.slelectedIndex = 0;
 
-// per rendere block 
+// definisco var per visualizzare la sezione dettaglio biglietto
 const dettaglioBiglietto = document.querySelector('.biglietto_output');
 
 // dichiaro var dettaglio biglietto per poi immettere il risultato:
@@ -31,6 +30,7 @@ const submit = document.getElementById('submit');
 submit.addEventListener('click', function(e){
     e.preventDefault();
 
+    // definisco prezzo e lo calcolo
     let prezzo = Number(kmUser.value) * prezzoKm;
     console.log(prezzo);
 
@@ -38,8 +38,10 @@ submit.addEventListener('click', function(e){
     console.log(kmUser.value);
     console.log(etaUser.value);
 
+    // rendo visibile la sezione dettaglio biglietto
     dettaglioBiglietto.style.display = 'block'
 
+    // definisco condizioni in base all'età passeggero
     if (etaUser.value === 'minorenne'){
         const prezzoSconto =  prezzo / 100 * prezzoMinorenne;
         console.log(prezzoSconto);
@@ -54,7 +56,7 @@ submit.addEventListener('click', function(e){
     // prezzo.toFixed(2);
     console.log(`Il prezzo del bigleitto è di € ${prezzo}.`);
 
-    // inserire i risulti
+    // inserire i risulti sulla sezione dettaglio biglietto
     nomePasseggero.innerText = userName.value;
     offerta.innerHTML = etaUser.value;
 
@@ -68,14 +70,13 @@ submit.addEventListener('click', function(e){
 });
 
 // pulisco gli input con il tasto annulla:
-
 const annulla = document.getElementById('clear');
 annulla.addEventListener('click', function(e){
     e.preventDefault();
     console.log('sto annullando');
     userName.value = '';
     kmUser.value = '';
-    etaUser.value = seleziona;
+    etaUser.value = etaUser.options[0].value;
    
 });
 
